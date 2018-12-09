@@ -1,8 +1,6 @@
 {
   "plugins": [
-    "version-inline",
-    "transform-css-import-to-string",
-    "babel-plugin-stylus-compiler"
+    "version-inline"
   ],
   "presets": [
     [

@@ -1,9 +1,10 @@
-import Core, { injectStyles, css } from './core';
+import Core, { injectStyles, css, setHtmlDir } from "./core";
 import classic from './engine/classic';
 
 export default class Auth0Lock extends Core {
   constructor(clientID, domain, options) {
     super(clientID, domain, options, classic);
+    setHtmlDir(this.getDirection());
     injectStyles();
   }
 }
