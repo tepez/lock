@@ -1,3 +1,11 @@
+body
+  direction ltr
+
+// rotate the arrows in submit and back buttons
+.auth0-label-submit svg, .auth0-lock-back-button svg
+  /* rtl:ignore */
+  transform: rotate(180deg)
+
 .auth0-lock
   @require "_normalize"
 

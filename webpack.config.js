@@ -33,6 +33,21 @@ module.exports = {
         test: /\.styl$/,
         use: [
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function() {
+                return [
+                  require('postcss-rtl')({
+                    addPrefixToSelector: function addPrefixToSelector(selector, prefix) {
+                      return `${prefix} ${selector}`; // Make selectors like [dir=rtl] > .selector
+                    },
+                    onlyDirection: 'rtl'
+                  })
+                ];
+              }
+            }
+          },
           'stylus-loader',
           {
             loader: 'stylus-loader',

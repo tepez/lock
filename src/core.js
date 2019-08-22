@@ -204,6 +204,13 @@ export default class Base extends EventEmitter {
     if (typeof this.engine[str] != 'function') return m;
     return this.engine[str](m, ...args);
   }
+
+  getDirection() {
+    const m = read(getEntity, 'lock', this.id);
+    return l.ui.language(m) === 'he' // TODO add other RTL language codes
+      ? 'rtl'
+      : 'ltr';
+  }
 }
 
 export function injectStyles() {
@@ -223,6 +230,10 @@ export function injectStyles() {
   } else {
     style.innerHTML = css;
   }
+}
+
+export function setHtmlDir(dir) {
+  document.getElementsByTagName('html')[0].dir = dir;
 }
 
 /**
