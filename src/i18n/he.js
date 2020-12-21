@@ -112,7 +112,7 @@ export default {
   signUpLabel: 'הרשמה',
   signUpSubmitLabel: 'הרשם',
   signUpTerms: 'בהרשמה למערכת, את/ה מסכים/ה לתנאי השימוש ולמדיניות הפרטיות שלנו.',
-  signUpWithLabel: 'הרשם באמצות %s',
+  signUpWithLabel: 'הרשם באמצעות %s',
   socialLoginInstructions: '',
   socialSignUpInstructions: '',
   ssoEnabled: 'Single Sign-On enabled',
